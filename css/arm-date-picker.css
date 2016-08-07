@@ -1,0 +1,301 @@
+﻿
+
+.arm-date-picker, .arm-date-picker div, .arm-date-picker span,
+.arm-date-picker select,.arm-date-picker input[type=text] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+.arm-date-picker {
+    width: 280px;
+    position: relative;
+    display:inline-block;
+    vertical-align:top;
+}
+
+    .arm-date-picker .input-box {
+        position: relative;
+        height: 36px;
+        width: 100%;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        background-color:#fff;
+    }
+
+    .arm-date-picker .input-box.valid{
+
+    }
+
+    .arm-date-picker .input-box.not-valid{
+        border-color:red;
+    }
+
+        .arm-date-picker .input-box > div {
+            width: 36px;
+            height: 36px;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .arm-date-picker.ltr .input-box > div{
+            left:auto;
+            right:0;
+            border-left:1px solid #ccc;
+            border-right:none;
+        }
+
+        
+
+            .arm-date-picker .input-box > div:hover span {
+                background-color: #1abc9c;
+            }
+
+            .arm-date-picker .input-box > div span {
+                position: absolute;
+                width: 30px;
+                height: 24px;
+                top: 8px;
+                left: 2px;
+                text-align: center;
+                line-height: 24px;
+                background-color: #16a085;
+                color: #fff;
+            }
+
+            .arm-date-picker.ltr .input-box > div span{
+                left: auto;
+                right:2px;
+                
+            }
+
+                .arm-date-picker .input-box > div span:before {
+                    content: '';
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                    height: 5px;
+                    width: 100%;
+                    background-color: #c0392b;
+                    z-index: 1;
+                }
+
+    .arm-date-picker.ltr .input-box > div span:before {
+        left: auto;
+        right:0;
+       
+    }
+
+                .arm-date-picker .input-box > div span:after {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    left: 4px;
+                    width: 2px;
+                    height: 7px;
+                    background-color: #df3f3f;
+                    z-index: 2;
+                }
+
+                .arm-date-picker.ltr .input-box > div span:after{
+                    width:1px;
+                }
+
+            .arm-date-picker .input-box > div:after, .arm-date-picker .input-box > div:before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 7px;
+                background-color: #df3f3f;
+                top: 2px;
+                z-index: 3;
+            }
+
+            .arm-date-picker.ltr .input-box > div:after, .arm-date-picker.ltr .input-box > div:before{
+                width:1px;
+            }
+
+            .arm-date-picker .input-box > div:after {
+                left: 16px;
+            }
+
+            .arm-date-picker.ltr .input-box > div:after{
+                left: auto;
+                right: 16px;
+            }
+
+            .arm-date-picker .input-box > div:before {
+                left: 26px;
+            }
+
+            .arm-date-picker.ltr .input-box > div:before{
+                left: auto;
+                right: 26px;
+            }
+
+
+
+
+        .arm-date-picker .input-box input[type=text] {
+            width: calc(100% - 36px);
+            height: 100%;
+            line-height: 36px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .arm-date-picker.ltr .input-box input[type=text]{
+            left: 0;
+            right: auto;
+        }
+
+    .arm-date-picker .picker-box {
+        width: 100%;
+        background-color: #ecf0f1;
+        border: 1px solid #bdbdbd;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index:5;
+        box-shadow:0 0 10px 1px rgba(146, 146, 146, 0.73)
+    }
+    .arm-date-picker.ltr .picker-box{
+        left: auto;
+        right: 0;
+    }
+
+    .arm-date-picker .picker-box.on-top{
+        bottom:40px;
+        top:auto;
+    }
+
+
+
+    .arm-date-picker .arm-dropdowns {
+        padding: 1px;
+    }
+
+        .arm-date-picker .arm-dropdowns:after, .arm-date-picker .arm-month-days .week-days:after,
+        .arm-date-picker .arm-month-days .month-days:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .arm-date-picker .arm-dropdowns select {
+            width: 50%;
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid #f6f6f6;
+            outline: none;
+            direction: rtl;
+        }
+
+        .arm-date-picker.ltr .arm-dropdowns select{
+            direction:ltr;
+        }
+
+        .arm-date-picker .arm-dropdowns .year-select {
+        }
+
+        .arm-date-picker .arm-dropdowns .month-select {
+        }
+
+    .arm-date-picker .arm-month-days {
+    }
+
+        .arm-date-picker .arm-month-days .week-days {
+            margin-bottom: 2px;
+            padding: 1px 1px 0 1px;
+        }
+
+
+
+            .arm-date-picker .arm-month-days .week-days > div, .arm-date-picker .arm-month-days .month-days > div {
+                float: right;
+                width: calc(100% / 7);
+                text-align: center;
+                padding: 1px;
+            }
+
+            .arm-date-picker.ltr .arm-month-days .week-days > div, .arm-date-picker.ltr .arm-month-days .month-days > div{
+                float:left;
+            }
+
+                .arm-date-picker .arm-month-days .week-days > div span {
+                    font-size: 14px;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    
+                }
+
+                .arm-date-picker .arm-month-days .week-days > div span,
+                .arm-date-picker .arm-month-days .month-days > div span {
+                    height: 36px;
+                    line-height: 36px;
+                    display: block;
+                    background-color: #fff;
+                    text-align:center;
+                }
+
+                .arm-date-picker .arm-month-days .month-days > div:not(.no-content) span {
+                    cursor: pointer;
+                }
+
+                    .arm-date-picker .arm-month-days .month-days > div:not(.no-content) span:hover {
+                        background-color: #dbdbdb;
+                    }
+
+
+
+        .arm-date-picker .arm-month-days .month-days {
+            padding: 0 1px 1px 1px;
+        }
+
+            .arm-date-picker .arm-month-days .month-days > div.no-content {
+            }
+
+                .arm-date-picker .arm-month-days .month-days > div.no-content span {
+                    background: none;
+                }
+
+            .arm-date-picker .arm-month-days .month-days > div.selected span {
+                background-color:#d35400;
+                color:#fff;
+            }
+
+            .arm-date-picker .arm-month-days .month-days > div.selected:hover span{
+                background-color:#d35400;
+            }
+
+            .arm-date-picker .arm-month-days .today-button{
+                padding:1px;
+            }
+            .arm-date-picker .arm-month-days .today-button span{
+                display:block;
+                text-align:center;
+                line-height:24px;
+                background-color:#FFF;
+                cursor:pointer;
+
+            }
+
+            .arm-date-picker .arm-month-days .today-button span:hover{
+                background-color: #d35400;
+                color:#fff;
+            }

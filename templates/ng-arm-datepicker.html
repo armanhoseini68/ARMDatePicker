@@ -1,0 +1,35 @@
+﻿
+
+
+
+<div class="arm-date-picker {{direction}}">
+    <div class="input-box" ng-class="{'not-valid':dateNotValid}">
+        <input type="text" ng-model="ngModel" onblur="angular.element(this).scope().onDateInputBlur()" />
+        <div ng-click="openDatePicker()">
+            <span>{{today}}</span>
+        </div>
+    </div>
+    <div class="picker-box" ng-show="datePickerOpened" ng-class="{'on-top':position=='top'}" >
+        <div class="arm-dropdowns">
+            <select class="year-select" ng-options="item for item in years"
+                    ng-model="selectedDate.Year" ng-change="yearChanged()"></select>
+            <select class="month-select" ng-options="item for item in months"
+                    ng-model="selectedMonth" ng-change="monthChanged()"></select>
+        </div>
+        <div class="arm-month-days">
+            <div class="week-days">
+                <div ng-repeat="weekDay in weekDays"><span>{{weekDay}}</span></div>
+            </div>
+            <div class="month-days">
+                <div ng-repeat="day in dayList track by $index"
+                     ng-class="{'no-content':day==0,'selected':day==selectedDate.Day}"
+                     ng-click="daysOnclick(day)">
+                    <span>{{day==0?'':day}}</span>
+                </div>
+            </div>
+            <div class="today-button">
+                <span ng-click="goToday()">{{direction=='rtl'?'برو به امروز':'Today'}}</span>
+            </div>
+        </div>
+    </div>
+</div>

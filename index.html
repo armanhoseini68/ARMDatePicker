@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+    <title>ARMDatePicker</title>
+    <link href="css/arm-date-picker.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <script src="js/ng-arm-datepicker.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="mainApp" >
+    <div ng-controller="mainController">
+        <arm-date-picker ng-model="myDate"
+                         source-object="dateSource"
+                         culture="fa"
+                         position="bottom"></arm-date-picker>
+    </div>
+</body>
+</html>
